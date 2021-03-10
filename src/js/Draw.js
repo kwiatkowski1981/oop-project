@@ -1,1 +1,9 @@
-console.log('yo draw');
+class Draw {
+
+    constructor() {
+
+this.options = ["red", "green", "blue"];
+
+
+    }
+}
