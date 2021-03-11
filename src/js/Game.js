@@ -37,5 +37,8 @@ class Game {
 
     startGame() {
 
+        if (this.inputBid.value < 1) return alert('Masz za mało hajsu');
+
+
     }
 }
