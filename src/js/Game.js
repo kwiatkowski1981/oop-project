@@ -46,7 +46,7 @@ class Game {
         this.wallet.changeWallet(bid, '-');
 
         this.draw = new Draw();
-
+        const colors = this.draw.getDrawResult();
     }
 
 }
