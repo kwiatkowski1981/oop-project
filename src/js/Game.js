@@ -44,8 +44,9 @@ class Game {
         }
 
         this.wallet.changeWallet(bid, '-');
+
+        this.draw = new Draw();
+
     }
-
-
 
 }
