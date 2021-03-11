@@ -18,7 +18,9 @@ class Game {
     render(colors = ['grey', 'grey', 'grey'], money = this.wallet.getWalletValue(), result = "", stats = [0,0,0]) {
         console.log('gramy...!!!!!');
 
-        this.boards.forEach(board, index)
+        this.boards.forEach((board, index) => {
+          board.style.backgroundColor = colors[index];
+        })
 
         this.spanWallet.textContent = money;
         this.spanResult.textContent = result;
