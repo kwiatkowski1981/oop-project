@@ -20,6 +20,8 @@ class Game {
         this.spanGames = document.querySelector('score span.number');
         this.spanWins = document.querySelector('score span.win');
         this.spanLosses = document.querySelector('score span.loss');
+
+        this.render();
     }
 
 
