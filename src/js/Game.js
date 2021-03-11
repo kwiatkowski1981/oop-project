@@ -29,14 +29,23 @@ class Game {
             result = `You LOOSE ${bid} !!!`;
         }
         this.spanResult.textContent = result;
-        console.log(`%cstatystyki %c ${stats}`,"color: pink", "color: yellow");
+        console.log(`%cstatystyki %c ${stats}`, "color: pink", "color: yellow");
         this.spanGames.textContent = stats[0];
         this.spanWins.textContent = stats[0];
         this.spanLosses.textContent = stats[0];
     }
 
     startGame() {
-        if (this.inputBid.value < 1) return alert('Masz za mało hajsu');
+        if (this.inputBid.value < 1) return alert('nie oplaca sie grac za taka stawke');
+        const bid = Math.floor(this.inputBid.value);
 
+        if (!this.wallet.checkCanPlay(bid)) {
+            return alert('Masz za mało hajsu');
+        }
+
+        this.wallet.changeWallet(bid, '-');
     }
+
+
+
 }
