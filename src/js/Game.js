@@ -2,7 +2,7 @@ class Game {
     constructor(start) {
         this.stats = new Statistics();
         this.wallet = new Wallet(start);
-        document.getElementById('start').addEventListener('click', this.startGame());
+        document.getElementById('start').addEventListener('click', this.startGame().bind(this));
         this.spanWallet = document.querySelector('.panel span.wallet');
         this.boards = [...document.querySelectorAll('div.color')];
         this.inputBid = document.getElementById('bid');
