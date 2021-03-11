@@ -9,9 +9,9 @@ import '../scss/main.scss';
 console.log('HELLO 🚀')
 
 class Game {
-    constructor() {
+    constructor(start) {
         this.stats = new Statistics();
-        this.wallet = new Wallet(100);
+        this.wallet = new Wallet(start);
         document.getElementById('start').addEventListener('click', this.startGame());
         this.spanWallet = document.querySelector('.panel span.wallet');
         this.boards = document.querySelectorAll('div.color');
@@ -31,3 +31,5 @@ class Game {
 
     }
 }
+
+const game = new Game(200);
