@@ -49,7 +49,7 @@ class Game {
         const colors = this.draw.getDrawResult();
         const win = Result.checkWinner(colors);
         const wonMoney = Result.moneyWinInGame(win, bid);
-
+        this.wallet.changeWallet(wonMoney);
     }
 
 }
