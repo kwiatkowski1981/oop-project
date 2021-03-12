@@ -11,7 +11,6 @@ class Result {
             // || draw[0] !== draw[2]
         )return true;
         else return false;
-
     }
 
 }
