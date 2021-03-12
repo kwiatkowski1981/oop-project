@@ -48,7 +48,7 @@ class Game {
         this.draw = new Draw();
         const colors = this.draw.getDrawResult();
         const win = Result.checkWinner(colors);
-
+        const wonMoney = Result.moneyWinInGame(win, bid);
 
     }
 
