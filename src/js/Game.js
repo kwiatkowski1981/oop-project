@@ -31,8 +31,8 @@ class Game {
         this.spanResult.textContent = result;
         console.log(`%cstatystyki %c ${stats}`, "color: pink", "color: yellow");
         this.spanGames.textContent = stats[0];
-        this.spanWins.textContent = stats[0];
-        this.spanLosses.textContent = stats[0];
+        this.spanWins.textContent = stats[1];
+        this.spanLosses.textContent = stats[2];
     }
 
     startGame() {
@@ -51,6 +51,8 @@ class Game {
         const wonMoney = Result.moneyWinInGame(win, bid);
         this.wallet.changeWallet(wonMoney);
         this.stats.addGameToStatistics(win, bid);
+
+        this.render(colors, this.wallet.getWalletValue(),win, this.stats.showGameStatistics(), bid, wonMoney);
     }
 
 }
