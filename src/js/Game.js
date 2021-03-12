@@ -50,6 +50,7 @@ class Game {
         const win = Result.checkWinner(colors);
         const wonMoney = Result.moneyWinInGame(win, bid);
         this.wallet.changeWallet(wonMoney);
+        this.stats.addGameToStatistics(win, bid);
     }
 
 }
